@@ -1,9 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('error') {
+    stage('build') {
       steps {
-        sleep 1
+        sh 'echo "build"'
+      }
+    }
+
+    stage('test') {
+      steps {
+        sh 'echo "test"'
+      }
+    }
+
+    stage('deploy') {
+      steps {
+        sh 'echo "deploy"'
       }
     }
 
